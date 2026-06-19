@@ -19,9 +19,7 @@ body {
 
 body {
   margin: 0;
-  display: grid;
   min-height: 100svh;
-  place-items: center;
   padding: 24px;
   color: var(--ink);
   background:
@@ -35,10 +33,16 @@ a {
   text-decoration: none;
 }
 
+.page {
+  display: grid;
+  width: min(1040px, 100%);
+  gap: 22px;
+  margin: 0 auto;
+}
+
 .card {
   display: grid;
   grid-template-columns: 320px 1fr;
-  width: min(1040px, 100%);
   min-height: 540px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.82);
@@ -184,7 +188,7 @@ p {
   grid-template-columns: max-content minmax(0, max-content);
   align-items: center;
   gap: 12px;
-  margin-top: 38px;
+  margin-top: 34px;
 }
 
 .action {
@@ -221,10 +225,74 @@ p {
   background: var(--white);
 }
 
+.faq-panel {
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 58px rgba(25, 42, 65, 0.1);
+  backdrop-filter: blur(24px);
+}
+
+.faq-heading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.qa-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.faq-heading h2 {
+  margin: 0;
+  color: var(--black);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.faq-heading p {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.qa {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.qa h3 {
+  margin: 0 0 8px;
+  color: var(--black);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.qa p {
+  max-width: none;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
 @media (max-width: 760px) {
   body {
     padding: 14px;
-    place-items: stretch;
   }
 
   .card {
@@ -276,5 +344,17 @@ p {
 
   .action {
     width: 100%;
+  }
+
+  .faq-panel {
+    border-radius: 22px;
+  }
+
+  .qa {
+    padding: 16px;
+  }
+
+  .qa h3 {
+    font-size: 18px;
   }
 }
