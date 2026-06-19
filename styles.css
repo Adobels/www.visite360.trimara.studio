@@ -172,27 +172,11 @@ p {
   place-items: center;
 }
 
-.street-view svg {
+.street-view img {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.badge-disc {
-  fill: rgba(255, 255, 255, 0.62);
-}
-
-.badge-ring {
-  fill: none;
-  stroke: rgba(43, 127, 255, 0.34);
-  stroke-width: 1.5;
-}
-
-.badge-text {
-  fill: #3d4652;
-  font-size: 12px;
-  font-weight: 760;
-  letter-spacing: 0;
+  object-fit: contain;
 }
 
 .actions {
